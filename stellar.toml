@@ -12,7 +12,7 @@ ACCOUNTS=[
 
 [DOCUMENTATION]
 ORG_NAME="ImpalaPay"
-The domain can be any valid RFC 1035 domain name
+ORG_DBA="IMPALAPAY SERVICES"
 ORG_URL="https://impalapay.io"
 ORG_LOGO="https://impalapay.io/awesomelogo.png"
 ORG_DESCRIPTION="impalapay is a decentralized payment network that enables fast, low-cost, and secure transactions as an anchor"
