@@ -1,9 +1,7 @@
-# Sample stellar.toml
-VERSION="2.5.0"
-
+VERSION="2.0.0"
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
-FEDERATION_SERVER="https://github.com/joelwasike/stellar.toml/blob/main/stellar.toml/federation"
-TRANSFER_SERVER="https://github.com/joelwasike/stellar.toml/blob/main/stellar.toml"
+FEDERATION_SERVER="https://api.domain.com/federation"
+TRANSFER_SERVER="https://api.domain.com"
 SIGNING_KEY="GBBHQ7H4V6RRORKYLHTCAWP6MOHNORRFJSDPXDFYDGJB2LPZUFPXUEW3"
 HORIZON_URL="https://horizon.domain.com"
 ACCOUNTS=[
@@ -13,23 +11,24 @@ ACCOUNTS=[
 ]
 
 [DOCUMENTATION]
-ORG_NAME="Impalapay"
-ORG_DBA="Organization DBA"
-ORG_URL="https://immpalapay.com"
-ORG_LOGO="https://www.domain.com/awesomelogo.png"
-ORG_DESCRIPTION="payment services"
-ORG_PHYSICAL_ADDRESS="123 Sesame Street, New York, NY 12345, United States"
-ORG_PHYSICAL_ADDRESS_ATTESTATION="https://www.domain.com/address_attestation.jpg"
-ORG_PHONE_NUMBER="1 (123)-456-7890"
-ORG_PHONE_NUMBER_ATTESTATION="https://www.domain.com/phone_attestation.jpg"
-ORG_KEYBASE="accountname"
-ORG_TWITTER="orgtweet"
+ORG_NAME="ImpalaPay"
+The domain can be any valid RFC 1035 domain name
+ORG_URL="https://impalapay.io"
+ORG_LOGO="https://impalapay.io/awesomelogo.png"
+ORG_DESCRIPTION="impalapay is a decentralized payment network that enables fast, low-cost, and secure transactions as an anchor"
+ORG_PHYSICAL_ADDRESS="Wu Yi Plaza, Nairobi, P.O.B.ox 10971-00100, Kenya"
+ORG_PHYSICAL_ADDRESS_ATTESTATION="https://impalapay.io/address_attestation.jpg"
+ORG_PHONE_NUMBER="+254731999060*impalapay.io"
+ORG_PHONE_NUMBER_ATTESTATION=""https://impalapay.io/address_attestation.pdf"
+ORG_KEYBASE="impalapay"
+ORG_TWITTER="impalapay"
 ORG_GITHUB="orgcode"
 ORG_OFFICIAL_EMAIL="support@domain.com"
+FEDERATION_SERVER = "https://federation.impalapay.io/federation"
 
 [[PRINCIPALS]]
 name="John Mutuku"
-email="jane@domain.com"
+email="akumucliff@gmail.com"
 keybase="crypto_jane"
 twitter="crypto_jane"
 github="crypto_jane"
@@ -51,14 +50,13 @@ redemption_instructions="Use SEP6 with our federation server"
 collateral_addresses=["2C1mCx3ukix1KfegAY5zgQJV7sanAciZpv"]
 collateral_address_signatures=["304502206e21798a42fae0e854281abd38bacd1aeed3ee3738d9e1446618c4571d10"]
 
-# asset with meta info
 [[CURRENCIES]]
-code="GOAT"
+code="IMPA"
 issuer="GD5T6IPRNCKFOHQWT264YPKOZAWUMMZOLZBJ6BNQMUGPWGRLBK3U7ZNP"
 display_decimals=2
 name="goat share"
-desc="1 GOAT token entitles you to a share of revenue from Elkins Goat Farm."
-conditions="There will only ever be 10,000 GOAT tokens in existence. We will distribute the revenue share annually on Jan. 15th"
+desc="1 IMPA token entitles you to a share of revenue from anywhere."
+conditions="There will only ever be 10,000 IMPA tokens in existence. We will distribute the revenue share annually on Jan. 15th"
 image="https://static.thenounproject.com/png/2292360-200.png"
 fixed_number=10000
 
@@ -82,19 +80,3 @@ DISPLAY_NAME="Domain United States"
 HOST="core-us.domain.com:11625"
 PUBLIC_KEY="GAOO3LWBC4XF6VWRP5ESJ6IBHAISVJMSBTALHOQM2EZG7Q477UWA6L7U"
 HISTORY="http://history.domain.com/prd/core-live/core_live_003/"
-
-# optional extra information for humans
-# Useful place for anchors to detail various policies and required info
-
-###################################
-# Required compliance fields:
-#      name=<recipient name>
-#      addr=<recipient address>
-# Federation Format:
-#        <phone number>*anchor.com
-#        Forwarding supported by sending to: forward*anchor.com
-#           forward_type=bank_account
-#           swift=<swift code of receiving bank>
-#           acct=<recipient account number at receiving bank>
-# Minimum Amount Forward: $2 USD
-# Maximum Amount Forward: $10000 USD
